@@ -103,4 +103,11 @@ class ShoppingCart {
     this.total = 0;
     this.taxRate = 8.25;
   }
+
+  addItem(id, products) {
+    let product = products.find((item) => item.id === id);
+    const { name, price } = product;
+    this.items.push(product);
+    
+  }
 }
