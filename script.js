@@ -129,6 +129,11 @@ class ShoppingCart {
         <p>${price}</p>
         </div>`);
   }
+
+  // total items in the cart
+  getCounts() {
+    return this.items.length;
+  }
 }
 
 // instantiating new ShoppingCart
@@ -138,6 +143,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 [...addToCartBtns].forEach((btn) => {
   btn.addEventListener("click", (event) => {
     cart.addItem(Number(event.target.id), products);
+    totalNumberOfItems.textContent = cart.getCounts();
   });
 });
 
