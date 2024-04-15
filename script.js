@@ -141,6 +141,7 @@ class ShoppingCart {
       alert("Your shopping cart is already empty");
       return;
     }
+    
   }
 
   calculateTaxes(amount) {
